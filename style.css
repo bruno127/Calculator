@@ -1,12 +1,13 @@
 body {
     padding: 0;
-    margin: 0;
-    box-sizing: border-box; 
-    background-color: black;
+    margin: 0; 
+    background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
 }
 
 .calculator {
+    display: grid;
     margin: auto;
+    margin-top: 10%;
     width: 400px;
     border: 2px black solid;
     padding: 20px;
@@ -27,15 +28,14 @@ body {
     word-wrap: break-word;
     
 }
-.screen-last {
+.previous-operand {
     font-size: 20px;
     height: 45px;
 }
-.screen-display {
+.current-operand {
     margin-bottom: 15px;
     font-size: 40px;
-    
-    
+     
 }
 h1 {
     text-align: center;
