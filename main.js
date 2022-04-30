@@ -1,68 +1,34 @@
-class Calculator { //napravim novu klasu
-    constructor(previousOperandTextElement, currentOperandTextElement) { //izaberem dva displaya
-        this.previousOperandTextElement = previousOperandTextElement //uvijek se koristi this
-        this.currentOperandTextElement = currentOperandTextElement
-        this.clear()
-    }
+let currentNum = ""
+let previousNum = ""
+let operator = ""
 
-    clear() {
-        this.currentOperand = ''
-        this.previousOperand = ''
-        this.operation = undefined
-    }
-
-    delete() {
-
-    }
-
-    appendNumber(number) {
-        if(number==='.' && this.currentOperand.includes('.')) return
-        this.currentOperand = this.currentOperand.toString() + number.toString()
-    }
-
-    chooseOperation(operation) {
-        this.operation = operation
-        this.previousOperand = this.currentOperand
-        this.currentOperand = ''
-
-    }
-
-    compute() {
-
-    }
-
-    updateDisplay() {
-        this.currentOperandTextElement.innerText = this.currentOperand
-        this.previousOperandTextElement.innerText = this.previousOperand
-    }
-}
-
-
-const numberButtons = document.querySelectorAll ('[data-number]');
-const operationButtons = document.querySelectorAll ('[data-operater')
+const numberButtons = document.querySelectorAll('[data-number]')
+const operationButtons = document.querySelectorAll('[data-operater]')
 const equalsButton = document.querySelector ('[data-equals')
 const deleteButton = document.querySelector ('[data-delete')
 const allClearButton = document.querySelector ('[data-all-clear')
-const previousOperandTextElement = document.querySelector ('[data-previous-operand')
-const currentOperandTextElement = document.querySelector ('[data-current-operand')
+const previousDisplay = document.querySelector ('[data-previous-operand')
+const currentDisplay = document.querySelector ('[data-current-operand')
 
-const calculator = new Calculator (previousOperandTextElement, currentOperandTextElement) //kreiram const kalkulator 
-
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.appendNumber(button.innerText)
-        calculator.updateDisplay()
+numberButtons.forEach(btn => {
+    btn.addEventListener ('click', (e)=> {
+        handleNumber(e.target.textContent)
     })
 })
 
-operationButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.chooseOperation(button.innerText)
-        calculator.updateDisplay
-    })
-})
+operationButtons.forEach
 
+function handleNumber(number) {
+    if(currentNum.length <= 12) { //zaustavlja dalje pisanje
+    currentNum += (number)
+    currentDisplay.innerHTML = currentNum
+    }
+}
 
+function operationNumber(operation) {
+    operator = operation
+    currentDisplay.innerHTML = operator
+}
 
 
 
