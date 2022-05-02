@@ -1,41 +1,52 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Calculator</h1>
-            <div class="calculator">
-                <div class="screen">
-                <div data-previous-operand class="previous-operand"></div>
-                <div data-current-operand class="current-operand">0</div>
-                </div>
-            <div class="buttons">
-                <button id="clear"data-all-clear>CLEAR</button>
-                <button id="delete"data-delete>DELETE</button>
-
-                <button data-number>7</button>
-                <button data-number>8</button>
-                <button data-number>9</button>
-                <button data-operater>÷</button>
-
-                <button data-number>4</button>
-                <button data-number>5</button>
-                <button data-number>6</button>
-                <button data-operater>x</button>
-
-                <button data-number>1</button>
-                <button data-number>2</button>
-                <button data-number>3</button>
-                <button data-operater>-</button>
-
-                <button data-number>.</button>
-                <button data-number>0</button>
-                <button data-equals>=</button>
-                <button data-operater>+</button>
-            </div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+        <div class="screen">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand">0</div>
         </div>
-        <script src="main.js"></script>
-    </body>
+    <div class="buttons">
+        <button id="clear"data-all-clear>CLEAR</button>
+        <button id="delete"data-delete>DELETE</button>
+
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>÷</button>
+
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>x</button>
+
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>-</button>
+
+        <button data-decimal>.</button>
+        <button data-number>0</button>
+        <button data-equals>=</button>
+        <button data-operation>+</button>
+    </div>
+    </div>
+</div>
+<div class='footer'>
+    <p>Copyright © 2022 bruno127 <a href="https://github.com/bruno127" target="_blank">
+        <i class="fab fa-github"></i
+      ></a></p>
+  </div>
+  </div>
+</body>
 </html>

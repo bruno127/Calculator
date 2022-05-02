@@ -2,9 +2,11 @@ body {
     padding: 0;
     margin: 0; 
     background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
-}
-
-.calculator {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calculator {
     display: grid;
     margin: auto;
     margin-top: 10%;
@@ -14,54 +16,69 @@ body {
     border-radius: 15px;
     box-sizing: border-box;
     background-color: #DCDCDC;
-}
-
-.screen {
+  }
+  
+  .screen {
     border: 1px black solid;
     margin-bottom: 10px;
     height: 100px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 15px;
     background-color: white;
     text-align: right;
     word-break: break-all;
     word-wrap: break-word;
     
-}
-.previous-operand {
+  }
+  .previous-operand {
     font-size: 20px;
     height: 45px;
-}
-.current-operand {
+  }
+  .current-operand {
     margin-bottom: 15px;
     font-size: 40px;
      
-}
-h1 {
+  }
+  h1 {
     text-align: center;
     font-size: 3rem;
     color: #fff;
-}
-
-.buttons {
+  }
+  
+  .buttons {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-}
-
-.buttons button {
+  }
+  
+  .buttons button {
     font-size: 20px;
     padding: 20px;
     border-radius: 10px;
-}
-
-.buttons #clear, #delete {
+  }
+  
+  .buttons #clear, #delete {
     grid-column: span 2;
-}
-
-.buttons #screen {
+  }
+  
+  .buttons #screen {
     grid-column: span 4
+  }
+  
+  .fa-github {
+    color: var(--primary-light);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+  .footer {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
 }
-
-
+  
